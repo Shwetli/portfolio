@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>За мен</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">MyPortfolio</a>
+      <button class="nav-toggle" aria-label="Отвори меню" id="navToggleAbout">☰</button>
+      <nav class="main-nav" id="mainNavAbout">
+        <a href="index.html" class="nav-link">Начало</a>
+        <a href="about.html" class="nav-link active">За мен</a>
+        <a href="education.html" class="nav-link">Образование</a>
+        <a href="projects.html" class="nav-link">Проекти</a>
+        <a href="contact.html" class="nav-link">Контакти</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="about">
+      <h1>За мен</h1>
+      <p>Кой съм аз: кратка биография — откъс от живота ми, интереси и какво ме мотивира.</p>
+      <div class="two-col">
+        <div class="col photo-col">
+          <img src="C:\Users\sveto\Downloads\portfoliogei.jpg" alt="Снимка" class="about-photo">
+        </div>
+        <div class="col text-col">
+          <h3>Биография</h3>
+          <p>Роден в София, учил СУ Васил Левски и НПГ по КТС, интереси: уеб разработка, енергийна ефективност, проекти с Arduino. Работя в екип и уча постоянно.</p>
+
+          <h4>Хобита и интереси</h4>
+          <ul>
+            <li>Програмиране и уеб дизайн</li>
+            <li>Експерименти с електроника</li>
+            <li>Четене и писане</li>
+            <li>Фотография</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="yearAbout"></span> Светослав Трифонов. Всички права запазени.</p>
+      <div class="social">
+        <a href="https://www.facebook.com/share/1Cd5GeQGfH/" aria-label="Facebook">FB</a>
+        <a href="https://www.linkedin.com/in/shwetli-trifonov-5b5625388" aria-label="LinkedIn">IN</a>
+        <a href="https://github.com/Shwetli" aria-label="GitHub">GH</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  document.getElementById('yearAbout').textContent = new Date().getFullYear();
+  document.getElementById('navToggleAbout').addEventListener('click', () => {
+    document.getElementById('mainNavAbout').classList.toggle('open');
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Образование и опит</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">MyPortfolio</a>
+      <button class="nav-toggle" aria-label="Отвори меню" id="navToggleEdu">☰</button>
+      <nav class="main-nav" id="mainNavEdu">
+        <a href="index.html" class="nav-link">Начало</a>
+        <a href="about.html" class="nav-link">За мен</a>
+        <a href="education.html" class="nav-link active">Образование</a>
+        <a href="projects.html" class="nav-link">Проекти</a>
+        <a href="contact.html" class="nav-link">Контакти</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="education">
+      <h1>Образование</h1>
+
+      <table class="edu-table">
+        <thead>
+          <tr>
+            <th>Година</th>
+            <th>Училище/Университет</th>
+            <th>Специалност</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2018–2021</td>
+                <td>СУ Васил Левски</td>
+                <td>Математика и информатика</td>
+            <tr>
+                <td>2021–днес</td>
+                <td>НПГ по КТС</td>
+                <td>Системен програмист</td>
+            </tr>
+        </tbody>
+      </table>
+
+      <h2>Опит</h2>
+
+      <article class="exp-article">
+        <h3>Практика в уеб студио</h3>
+        <p>Работих по вътрешни проекти, поддръжка на сайтове и създаване на малки функционалности на PHP + MySQL.</p>
+      </article>
+
+      <article class="exp-article">
+        <h3>Учебен проект: EnergyApp</h3>
+        <p>Разработка на уеб приложение за пресмятане на енергийно потребление и даване на съвети за пестене на енергия.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="yearEdu"></span> Светослав Трифонов. Всички права запазени.</p>
+      <div class="social">
+        <a href="https://www.facebook.com/share/1Cd5GeQGfH/" aria-label="Facebook">FB</a>
+        <a href="https://www.linkedin.com/in/shwetli-trifonov-5b5625388" aria-label="LinkedIn">IN</a>
+        <a href="https://github.com/Shwetli" aria-label="GitHub">GH</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  document.getElementById('yearEdu').textContent = new Date().getFullYear();
+  document.getElementById('navToggleEdu').addEventListener('click', () => {
+    document.getElementById('mainNavEdu').classList.toggle('open');
+  });
+</script>
+</body>
+</html>

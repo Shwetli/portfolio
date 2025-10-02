@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Проекти</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">MyPortfolio</a>
+      <button class="nav-toggle" aria-label="Отвори меню" id="navToggleProj">☰</button>
+      <nav class="main-nav" id="mainNavProj">
+        <a href="index.html" class="nav-link">Начало</a>
+        <a href="about.html" class="nav-link">За мен</a>
+        <a href="education.html" class="nav-link">Образование</a>
+        <a href="projects.html" class="nav-link active">Проекти</a>
+        <a href="contact.html" class="nav-link">Контакти</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="projects">
+      <h1>Проекти</h1>
+      <p>Тук са няколко по-интересни проекта — кратко описание и линк към демо/репо.</p>
+
+      <div class="projects-grid">
+        <div class="card">
+          <img src="C:\Users\sveto\Downloads\nv.png" alt="Project 1">
+          <div class="card-body">
+            <h3>FootballBet</h3>
+            <p>Приложение което симулира залагания на футболни мачове.</p>
+            <a class="btn" href="https://github.com/Shwetli/FootballBet">Виж повече</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="C:\Users\sveto\Downloads\bomboclat.png" alt="Project 2">
+          <div class="card-body">
+            <h3>School Web Scraper</h3>
+            <p>Проект който представлява скрейпър на данни от интернет.</p>
+            <a class="btn" href="https://github.com/Shwetli/school-webscraper">Виж повече</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="C:\Users\sveto\Downloads\auto parts.png" alt="Project 3">
+          <div class="card-body">
+            <h3>Auto Parts Shop</h3>
+            <p>Java приложение с GUI и база данни за магазин за авточасти.</p>
+            <a class="btn" href="https://github.com/Shwetli/Parts-Shop">Виж повече</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="yearProj"></span> Светослав Трифонов. Всички права запазени.</p>
+      <div class="social">
+        <a href="https://www.facebook.com/share/1Cd5GeQGfH/" aria-label="Facebook">FB</a>
+        <a href="https://www.linkedin.com/in/shwetli-trifonov-5b5625388" aria-label="LinkedIn">IN</a>
+        <a href="https://github.com/Shwetli" aria-label="GitHub">GH</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  document.getElementById('yearProj').textContent = new Date().getFullYear();
+  document.getElementById('navToggleProj').addEventListener('click', () => {
+    document.getElementById('mainNavProj').classList.toggle('open');
+  });
+</script>
+</body>
+</html>

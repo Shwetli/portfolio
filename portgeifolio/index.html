@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Добре дошли в моето портфолио</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">MyPortfolio</a>
+      <button class="nav-toggle" aria-label="Отвори меню" id="navToggle">☰</button>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" class="nav-link active">Начало</a>
+        <a href="about.html" class="nav-link">За мен</a>
+        <a href="education.html" class="nav-link">Образование</a>
+        <a href="projects.html" class="nav-link">Проекти</a>
+        <a href="contact.html" class="nav-link">Контакти</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1 class="hero-title">Добре дошли в моето портфолио</h1>
+      <p class="lead">Аз съм Светослав — ученик и уеб ентусиаст. Тук ще намериш мои проекти, опит и начин да се свържеш с мен.</p>
+      <div class="author-card">
+        <img src="C:\Users\sveto\Downloads\portfoliogei.jpg" alt="Снимка на автора" class="author-photo">
+        <div>
+          <h3>Кратко представяне</h3>
+          <p>Обичам да правя чисти интерфейси, да учa и да експериментирам с нови технологии. Работя върху проекти с PHP, HTML и малко Arduino.</p>
+        </div>
+      </div>
+
+      <div class="home-actions">
+        <a class="btn" href="projects.html">Виж Проекти</a>
+        <a class="btn btn-outline" href="contact.html">Свържи се</a>
+      </div>
+
+      <div class="video-wrapper">
+        <h4>Любимо видео</h4>
+        <div class="video-embed">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/SGcq66h1AFE?si=dTTiN36DubEkL2su" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Светослав Трифонов. Всички права запазени.</p>
+      <div class="social">
+        <a href="https://www.facebook.com/share/1Cd5GeQGfH/" aria-label="Facebook">FB</a>
+        <a href="https://www.linkedin.com/in/shwetli-trifonov-5b5625388" aria-label="LinkedIn">IN</a>
+        <a href="https://github.com/Shwetli" aria-label="GitHub">GH</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  // навигация toggle
+  const navToggle = document.getElementById('navToggle');
+  const mainNav = document.getElementById('mainNav');
+  navToggle.addEventListener('click', () => {
+    mainNav.classList.toggle('open');
+  });
+
+  // активиране на текуща година в футъра
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // плавно показване на заглавието (CSS animation class handled in CSS)
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.hero-title').classList.add('show');
+  });
+</script>
+</body>
+</html>

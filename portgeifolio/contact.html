@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Контакти</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">MyPortfolio</a>
+      <button class="nav-toggle" aria-label="Отвори меню" id="navToggleContact">☰</button>
+      <nav class="main-nav" id="mainNavContact">
+        <a href="index.html" class="nav-link">Начало</a>
+        <a href="about.html" class="nav-link">За мен</a>
+        <a href="education.html" class="nav-link">Образование</a>
+        <a href="projects.html" class="nav-link">Проекти</a>
+        <a href="contact.html" class="nav-link active">Контакти</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="contact">
+      <h1>Свържи се с мен</h1>
+
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Формата е изпратена (примерно)');">
+        <label>Име
+          <input type="text" name="name" required>
+        </label>
+
+        <label>Имейл
+          <input type="email" name="email" required>
+        </label>
+
+        <label>Тема
+          <input type="text" name="subject">
+        </label>
+
+        <label>Съобщение
+          <textarea name="message" rows="6" required></textarea>
+        </label>
+
+        <label class="checkbox-label">
+          <input type="checkbox" required> Съгласен съм с условията
+        </label>
+
+        <button class="btn" type="submit">Изпрати</button>
+      </form>
+
+      <div class="map-wrapper">
+        <h3>Локация</h3>
+        <iframe title="Google Maps" src="https://www.google.com/maps?q=42.6977,23.3219&z=15&output=embed" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="yearContact"></span> Светослав Трифонов. Всички права запазени.</p>
+      <div class="social">
+        <a href="https://www.facebook.com/share/1Cd5GeQGfH/" aria-label="Facebook">FB</a>
+        <a href="https://www.linkedin.com/in/shwetli-trifonov-5b5625388" aria-label="LinkedIn">IN</a>
+        <a href="https://github.com/Shwetli" aria-label="GitHub">GH</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  document.getElementById('yearContact').textContent = new Date().getFullYear();
+  document.getElementById('navToggleContact').addEventListener('click', () => {
+    document.getElementById('mainNavContact').classList.toggle('open');
+  });
+</script>
+</body>
+</html>
